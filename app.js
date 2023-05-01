@@ -104,6 +104,8 @@ function displayTimer() {
     points.appendChild(pointsText);
 }
 
+console.log(pointCount)
+
 setInterval(() => {
     displayTimer()
 }, 1000);
@@ -115,6 +117,8 @@ function displayRecord(data) {
     recordContainer.appendChild(recordText);
 }
 
-let objectToPut = {id: "1",
-points: pointCount
+//put function
+
+function putRecord() {
+    DataService.putRecord(pointCount)
 }

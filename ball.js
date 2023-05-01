@@ -34,8 +34,11 @@ class Ball {
         if (this.y >= myCanvas.height) {
             this.speedy *= -1
             console.log('GAME OVER');
-      DataService.putRecord(objectToPut)
-      console.log(objectToPut)
+            const recordContainer = document.getElementById('record');
+            const oldRecord = recordContainer.innerHTML;
+            if(pointCount >= oldRecord) {
+                putRecord()
+            }
         }
         //collision
         if((this.y >= bar.y - ball.radius/ 2 && this.y - ball.radius <= bar.y) && (this.x > bar.x && this.x < bar.x + bar.length)) {
