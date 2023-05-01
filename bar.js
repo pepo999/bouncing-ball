@@ -11,9 +11,9 @@ static leftPressed = false;
 
 draw(ctx) {
     if (this.rightPressed) {
-        this.x += 10;
+        this.x += 7;
       } else if (this.leftPressed) {
-        this.x -= 10;
+        this.x -= 7;
       }
       if(this.x <= 0) {
         this.x = 0;
