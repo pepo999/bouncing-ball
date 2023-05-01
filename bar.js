@@ -11,15 +11,15 @@ static leftPressed = false;
 
 draw(ctx) {
     if (this.rightPressed) {
-        this.x += 7;
+        this.x += 10;
       } else if (this.leftPressed) {
-        this.x -= 7;
+        this.x -= 10;
       }
       if(this.x <= 0) {
         this.x = 0;
       }
-      if(this.x >= myCanvas.width-100) {
-        this.x = myCanvas.width-100;
+      if(this.x >= myCanvas.width-bar.length) {
+        this.x = myCanvas.width-bar.length;
       }
     ctx.fillStyle = 'black';
     ctx.fillRect(this.x, this.y, this.length, 10);

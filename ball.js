@@ -1,12 +1,13 @@
 class Ball {
-    constructor(x, y, radius, startAngle = 0, endAngle = Math.PI * 2, speed = 7) {
+    constructor(speed, x, y, radius, startAngle = 0, endAngle = Math.PI * 2) {
         this.x = x;
         this.y = y;
         this.radius = radius;
         this.startAngle = startAngle;
         this.endAngle = endAngle;
-        this.speedx = (Math.random() - Math.random()) * speed;
-        this.speedy = (Math.random() - Math.random()) * speed;
+        this.speedx = 1 * speed;
+        this.speedy = 1 * speed;
+        this.speed = speed;
     }
 
     draw(ctx) {
@@ -34,7 +35,8 @@ class Ball {
             this.speedy *= -1
             console.log('GAME OVER')
         }
-        if((this.y >= bar.y && this.y  <= bar.y + 10) && (this.x > bar.x && this.x < bar.x + 100)) {
+        //collision
+        if((this.y >= bar.y - ball.radius/ 2 && this.y - ball.radius <= bar.y) && (this.x > bar.x && this.x < bar.x + bar.length)) {
             this.speedy *= -1;
         }
 
