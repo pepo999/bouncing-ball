@@ -15,7 +15,7 @@ class SizeUp {
             this.x += (Math.random() - Math.random());
         }
         this.y += 1;
-        if ((this.x >= bar.x && this.x <= bar.x + bar.length) && (this.y + 7 >= bar.y && this.y + 7 <= bar.y + 100)) {
+        if ((this.x >= bar.x && this.x <= bar.x + bar.length) && (this.y + 7 >= bar.y && this.y + 7 <= bar.y + 20)) {
             bar.x -= 25;
             bar.length += 50;
             this.x = 0;
@@ -49,7 +49,7 @@ class PointsUp {
         if(this.powered === false){
             this.y += 1;
         }   
-        if ((this.x >= bar.x && this.x <= bar.x + bar.length) && (this.y + 7 >= bar.y && this.y + 7 <= bar.y + 100)) {
+        if ((this.x >= bar.x && this.x <= bar.x + bar.length) && (this.y + 7 >= bar.y && this.y + 7 <= bar.y + 20)) {
             pointCount += 50;
             this.x = -50;
             this.y = -100;

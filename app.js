@@ -4,8 +4,7 @@ const ctx = myCanvas.getContext('2d');
 
 let record;
 
-record = DataService.getRecord()
-console.log(record)
+DataService.getRecord().then(data => displayRecord(data))
 
 let bar = new Bar(myCanvas.width / 2, myCanvas.height / 1.3, 100)
 
@@ -93,7 +92,7 @@ function reduce() {
 
 }
 
-//timer
+//timer and record
 
 let pointCount = 0;
 
@@ -108,3 +107,14 @@ function displayTimer() {
 setInterval(() => {
     displayTimer()
 }, 1000);
+
+function displayRecord(data) {
+    const recordContainer = document.getElementById('record');
+    recordContainer.innerHTML = '';
+    let recordText = document.createTextNode(data[0].points)
+    recordContainer.appendChild(recordText);
+}
+
+let objectToPut = {id: "1",
+points: pointCount
+}
