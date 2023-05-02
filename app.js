@@ -4,6 +4,17 @@ const ctx = myCanvas.getContext('2d');
 
 let record;
 
+function start() {
+    const welcome = document.getElementById('welcome')
+    welcome.style.display = 'none';
+    myCanvas.style.display = 'block';
+    const points = document.getElementById('points')
+    const record = document.getElementById('record')
+    points.style.display = 'block'
+    record.style.display = 'block'
+    ballMove()
+}
+
 DataService.getRecord().then(data => displayRecord(data))
 
 let bar = new Bar(myCanvas.width / 2, myCanvas.height / 1.3, 100)
@@ -52,7 +63,7 @@ function ballMove() {
     window.requestAnimationFrame(ballMove)
 }
 
-window.requestAnimationFrame(ballMove)
+// window.requestAnimationFrame(ballMove)
 
 //keys
 
