@@ -12,6 +12,7 @@ function start() {
     const record = document.getElementById('record')
     points.style.display = 'block'
     record.style.display = 'block'
+    pointCount =0;
     ballMove()
 }
 
@@ -61,7 +62,7 @@ function ballMove() {
     bar.draw(ctx);
     counter++;
     if (counter % 1000 === 0) {
-        const increase = Math.random();
+        const increase = Math.random()/2;
         if (ball.speedx > 0) { ball.speedx += increase }
         if (ball.speedx < 0) { ball.speedx -= increase }
         if (ball.speedy > 0) { ball.speedy += increase }
