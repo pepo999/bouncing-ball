@@ -73,3 +73,56 @@ font-size: 20px;
 background-color: rgba(235, 59, 59, 0.7);
 font-size: 20px;
 }
+
+.grid-button {
+    display: grid;
+    /* grid-template-columns: 3;
+    grid-template-rows: 3; */
+    grid-template-areas:
+        '. top .'
+        'left center right'
+        '. bottom .'
+}
+
+.top,
+.right,
+.center,
+.bottom,
+.left {
+    margin: 0px;
+    border: none;
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+}
+
+.top {
+    grid-area: top;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.right {
+    grid-area: right;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+    box-shadow: 1px 1px 3px black;
+}
+
+.center {
+    grid-area: center;
+    border-radius: 0px;
+}
+
+.bottom {
+    grid-area: bottom;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+    box-shadow: 1px 1px 2px black;
+}
+
+.left {
+    grid-area: left;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}

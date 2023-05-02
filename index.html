@@ -33,7 +33,13 @@
     <div id="points"></div>
     <div id="record"></div>
     <canvas id="my-canvas" width="600" height="800"></canvas>
-
+    <div class="grid-button">
+        <button class="top" id="top-btn" onmousedown="scrollUp()"></button>
+        <button class="right" onclick="getNextPage()"></button>
+        <button class="center"></button>
+        <button class="bottom" onclick="scrollDown()"></button>
+        <button class="left" onclick="getPreviousPage()"></button>
+    </div>
 </body>
 <script src="./services/data-service.js"></script>
 <script src="./ball.js"></script>
