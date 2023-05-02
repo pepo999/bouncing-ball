@@ -51,4 +51,15 @@ background-color: rgba(187, 129, 129, 0.7);
 
 #gameover{
     display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 5vh;
+    bottom: 5vh;
+    left: 15vw;
+    right: 15vw;
+    width: 70vw;
+    height: 90vh;
+background-color: rgba(187, 129, 129, 0.7);
 }

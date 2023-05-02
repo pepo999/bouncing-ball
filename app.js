@@ -17,7 +17,7 @@ function start() {
 
 function end(){
     const gameover = document.getElementById('gameover')
-    gameover.style.display = 'block';
+    gameover.style.display = 'flex';
     myCanvas.style.display = 'none';
     const points = document.getElementById('points')
     const record = document.getElementById('record')
