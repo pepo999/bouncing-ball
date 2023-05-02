@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Ubuntu&display=swap');
+
+*{
+ font-family: 'Ubuntu', sans-serif;;
+}
+
 body, html{
     padding: 0px;
     margin: 0px;
@@ -11,7 +17,8 @@ body, html{
 #my-canvas{
     display: none;
     background-color: rgb(108, 176, 103);
-    width: 50vw;
+    height: 88vh;
+    background-size: cover;
 
 }
 
@@ -47,7 +54,8 @@ body, html{
     right: 15vw;
     width: 70vw;
     height: 90vh;
-background-color: rgba(187, 129, 129, 0.7);
+background-color: rgba(114, 190, 234, 0.7);
+font-size: 20px;
 }
 
 #gameover{
@@ -62,5 +70,6 @@ background-color: rgba(187, 129, 129, 0.7);
     right: 15vw;
     width: 70vw;
     height: 90vh;
-background-color: rgba(187, 129, 129, 0.7);
+background-color: rgba(235, 59, 59, 0.7);
+font-size: 20px;
 }

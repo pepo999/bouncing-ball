@@ -19,7 +19,7 @@ class Ball {
         ctx.closePath()
     }
 
-    changePosition() {  
+    changePosition() {
         this.x += this.speedx;
         this.y += this.speedy;
         if (this.x <= 0) {
@@ -36,16 +36,17 @@ class Ball {
             console.log('GAME OVER');
             const recordContainer = document.getElementById('record');
             const oldRecord = recordContainer.innerHTML;
-            if(pointCount >= oldRecord) {
+            console.log(oldRecord)
+            if (pointCount >= oldRecord) {
                 putRecord()
             }
             end()
         }
         //collision
-        if((this.y >= bar.y - ball.radius/ 2 && this.y - ball.radius <= bar.y) && (this.x > bar.x && this.x < bar.x + bar.length)) {
+        if ((this.y >= bar.y - ball.radius / 2 && this.y - ball.radius <= bar.y) && (this.x > bar.x && this.x < bar.x + bar.length)) {
             this.speedy *= -1;
-        }  
-      
+        }
+
     }
 
 }

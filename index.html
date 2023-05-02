@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,30 +8,37 @@
     <title>Bouncing Ball</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./mobile.css">
+    <link rel="shortcut icon" href="./assets/icona.png" type="image/x-icon">
 </head>
+
 <body>
     <div id="welcome">
         <h1>Bouncing Ball</h1>
         <p>Versione desktop: per muoverti utilizza le frecce</p>
         <p>Versione mobile: per muoverti utilizza il controller sullo schermo</p>
         <p>l'obiettivo del gioco è battere il record globale <br>
-        i punti aumentano con l'avanzare del tempo, inoltre <br>
-    i power-up danno bonus di punteggio</p>
-    <p>per continuare premi Ho capito!</p>
-    <button onclick="start()">Ho Capito!</button>
+            i punti aumentano con l'avanzare del tempo, inoltre <br>
+            i power-up danno bonus di punteggio</p>
+        <p>i pallini rossi danno un bonus di 10 punti e aumentano la lunghezza della barra per 10 secondi<br>
+            i pallini gialli danno 50 punti e nessun altro bonus </p>
+        <p>per iniziare una partita premi Start</p>
+        <button onclick="start()">START</button>
     </div>
     <div id="gameover">
         <span>GAME OVER</span>
+        <span id="gameover-text"></span>
+        <span id="gameover-text1"></span>
         <button onclick="gameover()">end game</button>
     </div>
-    <div id="points"></div>   
+    <div id="points"></div>
     <div id="record"></div>
-        <canvas id="my-canvas" width="800" height="600"></canvas> 
-    
+    <canvas id="my-canvas" width="600" height="800"></canvas>
+
 </body>
 <script src="./services/data-service.js"></script>
 <script src="./ball.js"></script>
 <script src="./bar.js"></script>
 <script src="./objects.js"></script>
 <script src="./app.js"></script>
+
 </html>
