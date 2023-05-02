@@ -9,12 +9,14 @@ body, html{
 }
 
 #my-canvas{
+    display: none;
     background-color: rgb(108, 176, 103);
     width: 50vw;
 
 }
 
 #points{
+    display: none;
     height: 40px;
     width: 50vw;
     background-color: rgb(0, 0, 0);
@@ -24,10 +26,23 @@ body, html{
 }
 
 #record{
+    display: none;
     height: 40px;
     width: 50vw;
     background-color: rgb(0, 0, 0);
     color: #fafafa;
     text-align: center;
     margin-top: 10px;
+}
+
+#welcome{
+    display: block;
+    position: fixed;
+    top: 5vh;
+    bottom: 5vh;
+    left: 15vw;
+    right: 15vw;
+    width: 70vw;
+    height: 90vh;
+background-color: rgba(187, 129, 129, 0.7);
 }
