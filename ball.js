@@ -39,6 +39,7 @@ class Ball {
             if(pointCount >= oldRecord) {
                 putRecord()
             }
+            end()
         }
         //collision
         if((this.y >= bar.y - ball.radius/ 2 && this.y - ball.radius <= bar.y) && (this.x > bar.x && this.x < bar.x + bar.length)) {

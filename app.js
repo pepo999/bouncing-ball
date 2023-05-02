@@ -15,6 +15,10 @@ function start() {
     ballMove()
 }
 
+function end(){
+    location.reload()
+}
+
 DataService.getRecord().then(data => displayRecord(data))
 
 let bar = new Bar(myCanvas.width / 2, myCanvas.height / 1.3, 100)
