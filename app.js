@@ -12,7 +12,8 @@ function start() {
     const record = document.getElementById('record')
     points.style.display = 'block'
     record.style.display = 'block'
-    pointCount =0;
+    points.style.color = '#fafafa'
+    pointCount = 0;
     ballMove()
 }
 
@@ -78,8 +79,6 @@ function ballMove() {
     }
     window.requestAnimationFrame(ballMove)
 }
-
-// window.requestAnimationFrame(ballMove)
 
 //keys
 
