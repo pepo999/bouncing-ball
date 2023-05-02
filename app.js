@@ -16,6 +16,17 @@ function start() {
 }
 
 function end(){
+    const gameover = document.getElementById('gameover')
+    gameover.style.display = 'block';
+    myCanvas.style.display = 'none';
+    const points = document.getElementById('points')
+    const record = document.getElementById('record')
+    points.style.display = 'none'
+    record.style.display = 'none'
+
+}
+
+function gameover(){
     location.reload()
 }
 
