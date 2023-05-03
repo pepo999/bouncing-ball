@@ -8,6 +8,8 @@ function start() {
     const welcome = document.getElementById('welcome')
     welcome.style.display = 'none';
     myCanvas.style.display = 'block';
+    const grid = document.getElementById('grid')
+    grid.style.display = 'grid';
     const points = document.getElementById('points')
     const record = document.getElementById('record')
     points.style.display = 'block'
@@ -22,6 +24,8 @@ function end() {
     const gameover = document.getElementById('gameover')
     gameover.style.display = 'flex';
     myCanvas.style.display = 'none';
+    const grid = document.getElementById('grid')
+    grid.style.display = 'none';
     const points = document.getElementById('points')
     const oldRecord = recordContainer.innerHTML;
     if (pointCount <= oldRecord) {
@@ -53,10 +57,10 @@ function gameover() {
     location.reload()
 }
 
-let backgrounds = ['./assets/acquazzurra.jpg', './assets/laghettoplacido.jpg', './assets/stelle.jpg', './assets/pineforestlake.jpg', './assets/glitter.jpg', './assets/gattino.jpg',]
+let backgrounds = ['./assets/acquazzurra.jpg', './assets/laghettoplacido.jpg', './assets/stelle.jpg', './assets/pineforestlake.jpg', './assets/glitter.jpg', './assets/gattino.jpg', './assets/finestra.jpg']
 
 function randomBackgroundImg() {
-    myCanvas.style.backgroundImage = 'url' + '(' + backgrounds[Math.floor(Math.random() * 6)] + ')';
+    myCanvas.style.backgroundImage = 'url' + '(' + backgrounds[Math.floor(Math.random() * 7)] + ')';
 }
 
 randomBackgroundImg()
