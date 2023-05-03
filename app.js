@@ -67,7 +67,7 @@ let bar = new Bar(myCanvas.width / 2, myCanvas.height / 1.3, 100)
 
 let speed = 7;
 
-let ball = new Ball(1, myCanvas.width / 2, 10, 15, 0, Math.PI * 2)
+let ball = new Ball(1, myCanvas.width / 2, 15, 15, 0, Math.PI * 2)
 
 let counter = 0;
 
@@ -109,7 +109,8 @@ function ballMove(off) {
         }
         window.requestAnimationFrame(ballMove)
     } else if (off === true) {
-        ball.y = 0;
+        ball.x = -500000000;
+        ball.y = - 5000;
         ball.speedy /= 10000000000000000000000000;
     }
 }
