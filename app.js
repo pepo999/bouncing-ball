@@ -110,7 +110,8 @@ function ballMove(off) {
         window.requestAnimationFrame(ballMove)
     } else if (off === true) {
         ball.x = -500000000;
-        ball.y = - 5000;
+        ball.y = - 5000000;
+        ball.speedx = 400000;
         ball.speedy /= 10000000000000000000000000;
     }
 }

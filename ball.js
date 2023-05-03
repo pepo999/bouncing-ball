@@ -26,16 +26,18 @@ class Ball {
         if (this.x <= 0 + ball.radius) {
             this.speedx *= -1
         }
-        if (this.y <= ball.radius) {
-            this.speedy *= -1
-        }
+        
         if (this.y <= 1) {
             this.speedy += 1;
         }
         if (this.y <= 3000 && this.y >= 6000) {
             this.speedy -= 5;
         }
-        if (this.x >= myCanvas.width - ball.radius) {
+        if (this.y <= this.radius) {
+            // this.speedy *= -1
+            this.speedy += 0.5;
+        }
+        if (this.x >= myCanvas.width - this.radius) {
             this.speedx *= -1
         }
         if (this.y >= myCanvas.height) {
