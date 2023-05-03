@@ -129,9 +129,17 @@ let downPressed = false;
 
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
-
+// const right = document.getElementById('right')
+// const left = document.getElementById('left')
+// const up = document.getElementById('up')
+// const down = document.getElementById('down')
+// right.addEventListener("keydown", keyDownHandler("Right"), false)
+// left.addEventListener("keydown", keyDownHandler("Left"), false)
+// up.addEventListener("keydown", keyDownHandler("Up"), false)
+// down.addEventListener("keydown", keyDownHandler("Down"), false)
 
 function keyDownHandler(e) {
+    console.log(e)
     if (e.key === "Right" || e.key === "ArrowRight") {
         bar.rightPressed = true;
         bar.x += 10;
@@ -146,10 +154,10 @@ function keyDownHandler(e) {
         bar.DownPressed = true;
         bar.y += 10;
     }
-
 }
 
 function keyUpHandler(e) {
+    console.log(e)
     if (e.key === "Right" || e.key === "ArrowRight") {
         bar.rightPressed = false;
 
@@ -159,9 +167,22 @@ function keyUpHandler(e) {
     if (e.key === "Up" || e.key === "ArrowUp") {
         bar.rightPressed = false;
 
-    } else if (e.key === "Down" || e.key === "ArrowDown") {
+    } 
+    if (e.key === "Down" || e.key === "ArrowDown") {
         bar.leftPressed = false;
     }
+    // if (e === "Right") {
+    //     bar.rightPressed = false;
+
+    // } if (e === "Left") {
+    //     bar.leftPressed = false;
+    // }
+    // if (e === "Up") {
+    //     bar.rightPressed = false;
+
+    // } else if (e === "Down") {
+    //     bar.leftPressed = false;
+    // }
 }
 
 //timeOut reduce size

@@ -8,6 +8,8 @@ class Bar {
 
   static rightPressed = false;
   static leftPressed = false;
+  static upPressed = false;
+  static downPressed = false;
 
   draw(ctx) {
     if (this.rightPressed) {
