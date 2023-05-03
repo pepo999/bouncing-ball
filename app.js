@@ -67,7 +67,7 @@ let bar = new Bar(myCanvas.width / 2, myCanvas.height / 1.3, 100)
 
 let speed = 7;
 
-let ball = new Ball(3, myCanvas.width / 2, 0, 15, 0, Math.PI * 2)
+let ball = new Ball(1, myCanvas.width / 2, 10, 15, 0, Math.PI * 2)
 
 let counter = 0;
 

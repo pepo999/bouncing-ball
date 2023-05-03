@@ -22,10 +22,11 @@ class Ball {
     changePosition() {
         this.x += this.speedx;
         this.y += this.speedy;
+        this.speedy += 0.1;
         if (this.x <= 0) {
             this.speedx *= -1
         }
-        if (this.y <= 0) {
+        if (this.y <= 10) {
             this.speedy *= -1
         }
         if (this.x >= myCanvas.width) {
@@ -44,7 +45,8 @@ class Ball {
         }
         //collision
         if ((this.y >= bar.y - ball.radius / 2 && this.y - ball.radius <= bar.y) && (this.x > bar.x && this.x < bar.x + bar.length)) {
-            this.speedy *= -1;
+            this.speedy *= -0.999;
+            // this.speedy -= 0.005;
         }
 
     }
