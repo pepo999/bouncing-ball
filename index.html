@@ -34,11 +34,16 @@
     <div id="record"></div>
     <canvas id="my-canvas" width="600" height="800"></canvas>
     <div class="grid-button" id="grid">
-        <button class="top" id="up" onclick="keyDownHandle('Pippo')"></button>
-        <button class="right" id="right"></button>
+        <button class="top" id="up" onclick="keyDownHandle('Su')"></button>
+        <button class="right" id="right" onclick="keyDownHandle('Destra')"></button>
         <button class="center"></button>
-        <button class="bottom" id="down"></button>
-        <button class="left" id="left"></button>
+        <button class="bottom" id="down" onclick="keyDownHandle('Giu')"></button>
+        <button class="left" id="left" onclick="keyDownHandle('Sinistra')"></button>
+        <!-- <button class="top" id="up" onkeydown="keyDownHandle('Su')" onkeyup="keyUpHandler('Su')"></button>
+        <button class="right" id="right" onkeydown="keyDownHandle('Destra')" onkeyup="keyUpHandler('Destra')"></button>
+        <button class="center"></button>
+        <button class="bottom" id="down" onkeydown="keyDownHandle('Giu')" onkeyup="keyUpHandler('Sinistra')"></button>
+        <button class="left" id="left" onkeydown="keyDownHandle('Sinistra')" onkeyup="keyUpHandler('Giu')"></button> -->
     </div>
 </body>
 <script src="./services/data-service.js"></script>

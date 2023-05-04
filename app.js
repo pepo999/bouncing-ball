@@ -127,16 +127,9 @@ let leftPressed = false;
 let upPressed = false;
 let downPressed = false;
 
-document.addEventListener("keydown", keyDownHandler, false);
+document.addEventListener("keydown", keyDownHandle, false);
 document.addEventListener("keyup", keyUpHandler, false);
-// const right = document.getElementById('right')
-// const left = document.getElementById('left')
-// const up = document.getElementById('up')
-// const down = document.getElementById('down')
-// right.addEventListener("keydown", keyDownHandler("Right"), false)
-// left.addEventListener("keydown", keyDownHandler("Left"), false)
-// up.addEventListener("keydown", keyDownHandler("Up"), false)
-// down.addEventListener("keydown", keyDownHandler("Down"), false)
+
 
 function keyDownHandle(e) {
     if (e.key === "Right" || e.key === "ArrowRight") {
@@ -153,8 +146,22 @@ function keyDownHandle(e) {
         bar.DownPressed = true;
         bar.y += 10;
     }
-    if(e === 'Pippo') {
-        console.log('demminchia')
+    if(e === 'Su') {
+        console.log('sususus')
+        bar.UpPressed = true;
+        bar.y -= 10;
+    }
+    if(e === 'Destra') {
+        bar.UpPressed = true;
+        bar.x += 10;
+    }
+    if(e === 'Sinistra') {
+        bar.UpPressed = true;
+        bar.x -= 10;
+    }
+    if(e === 'Giu') {
+        bar.UpPressed = true;
+        bar.y += 10;
     }
 }
 
@@ -171,6 +178,18 @@ function keyUpHandler(e) {
     } 
     if (e.key === "Down" || e.key === "ArrowDown") {
         bar.leftPressed = false;
+    }
+    if(e === 'Su') {
+        bar.UpPressed = false;
+    }
+    if(e === 'Destra') {
+        bar.UpPressed = false;
+    }
+    if(e === 'Sinistra') {
+        bar.UpPressed = false;
+    }
+    if(e === 'Giu') {
+        bar.UpPressed = false;
     }
 }
 
