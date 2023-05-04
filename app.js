@@ -138,7 +138,7 @@ document.addEventListener("keyup", keyUpHandler, false);
 // up.addEventListener("keydown", keyDownHandler("Up"), false)
 // down.addEventListener("keydown", keyDownHandler("Down"), false)
 
-function keyDownHandler(e) {
+function keyDownHandle(e) {
     if (e.key === "Right" || e.key === "ArrowRight") {
         bar.rightPressed = true;
         bar.x += 10;
@@ -152,6 +152,9 @@ function keyDownHandler(e) {
     } if (e.key === "Down" || e.key === "ArrowDown") {
         bar.DownPressed = true;
         bar.y += 10;
+    }
+    if(e === 'Pippo') {
+        console.log('demminchia')
     }
 }
 
