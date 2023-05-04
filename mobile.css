@@ -59,7 +59,7 @@
     
     .grid-button {
         margin-top: 20px;
-        display: none;
+        display: grid;
         /* grid-template-columns: 3;
         grid-template-rows: 3; */
         grid-template-areas:

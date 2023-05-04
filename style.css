@@ -89,6 +89,7 @@ font-size: 20px;
 .center,
 .bottom,
 .left {
+    display: none;
     margin: 0px;
     border: none;
     height: 50px;
