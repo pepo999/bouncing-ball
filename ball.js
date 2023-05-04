@@ -28,14 +28,14 @@ class Ball {
             this.speedx *= -1
         }
         
-        if (this.y <= 1) {
+        if (this.y -this.radius <= 0) {
             this.speedy += 1;
         }
-        if (this.y + this.radius * 2 <= 0) {
-            // this.speedy *= -1
-            // this.speedy = 0;
-            this.speedy += 0.1;
-        }
+        // if (this.y + this.radius + 30 <= 0) {
+        //     // this.speedy *= -1
+        //     // this.speedy = 0;
+        //     this.speedy += 0.1;
+        // }
         if (this.x >= myCanvas.width - this.radius) {
             this.speedx *= -1
         }
@@ -56,10 +56,10 @@ class Ball {
             this.speedy *= -0.985;
             this.speedy -= 0.03;
         }
-        if (this.x + this.radius === bar.x && (this.y <= bar.y && this.y >= bar.y + 12)) {
+        if ((this.x + this.radius === bar.x) && (this.y <= bar.y && this.y >= bar.y + 12)) {
             this.x *= -1;
         }
-        if (this.x - this.radius === bar.x + bar.length && (this.y <= bar.y && this.y >= bar.y + 12)) {
+        if ((this.x - this.radius === bar.x + bar.length) && (this.y <= bar.y && this.y >= bar.y + 12)) {
             this.x *= -1;
         }
     }
