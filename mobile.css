@@ -1,13 +1,16 @@
 @media screen and (max-width: 992px) {
-    #my-canvas{
+    /* #my-canvas{
         max-height: 60vh;
         width: 100vw;
-    }
+    } */
 
     #my-canvas{
         display: none;
         background-color: rgb(108, 176, 103);
+        /* height: 88vh; */
+        width: auto;
         height: 88vh;
+       /* width: 100vw; */
         background-size: cover;
     
     }
@@ -73,6 +76,7 @@
     .center,
     .bottom,
     .left {
+        display: flex;
         margin: 0px;
         border: none;
         height: 50px;
