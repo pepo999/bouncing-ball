@@ -139,7 +139,6 @@ document.addEventListener("keyup", keyUpHandler, false);
 // down.addEventListener("keydown", keyDownHandler("Down"), false)
 
 function keyDownHandler(e) {
-    console.log(e)
     if (e.key === "Right" || e.key === "ArrowRight") {
         bar.rightPressed = true;
         bar.x += 10;
@@ -157,7 +156,6 @@ function keyDownHandler(e) {
 }
 
 function keyUpHandler(e) {
-    console.log(e)
     if (e.key === "Right" || e.key === "ArrowRight") {
         bar.rightPressed = false;
 
@@ -171,18 +169,6 @@ function keyUpHandler(e) {
     if (e.key === "Down" || e.key === "ArrowDown") {
         bar.leftPressed = false;
     }
-    // if (e === "Right") {
-    //     bar.rightPressed = false;
-
-    // } if (e === "Left") {
-    //     bar.leftPressed = false;
-    // }
-    // if (e === "Up") {
-    //     bar.rightPressed = false;
-
-    // } else if (e === "Down") {
-    //     bar.leftPressed = false;
-    // }
 }
 
 //timeOut reduce size

@@ -31,11 +31,7 @@ class Ball {
         if (this.y <= 1) {
             this.speedy += 1;
         }
-        if (this.y <= 3000 && this.y >= 6000) {
-            this.speedy = -Infinity;
-            this.speedx = 0;
-        }
-        if (this.y + this.radius <= 0) {
+        if (this.y + this.radius * 2 <= 0) {
             // this.speedy *= -1
             // this.speedy = 0;
             this.speedy += 0.1;
@@ -44,11 +40,12 @@ class Ball {
             this.speedx *= -1
         }
         if (this.y >= myCanvas.height) {
-            this.speedy *= -1
-            console.log('GAME OVER');
+            this.x = Infinity
+            this.speedy *= -Infinity
+            // console.log('GAME OVER');
             const recordContainer = document.getElementById('record');
             const oldRecord = recordContainer.innerHTML;
-            console.log(oldRecord)
+            // console.log(oldRecord)
             if (pointCount >= oldRecord) {
                 putRecord()
             }
@@ -59,7 +56,12 @@ class Ball {
             this.speedy *= -0.985;
             this.speedy -= 0.03;
         }
-
+        if (this.x + this.radius === bar.x && (this.y <= bar.y && this.y >= bar.y + 12)) {
+            this.x *= -1;
+        }
+        if (this.x - this.radius === bar.x + bar.length && (this.y <= bar.y && this.y >= bar.y + 12)) {
+            this.x *= -1;
+        }
     }
 
 }
