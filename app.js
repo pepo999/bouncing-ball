@@ -130,7 +130,6 @@ let downPressed = false;
 document.addEventListener("keydown", keyDownHandle, false);
 document.addEventListener("keyup", keyUpHandler, false);
 
-
 function keyDownHandle(e) {
     if (e.key === "Right" || e.key === "ArrowRight") {
         bar.rightPressed = true;
